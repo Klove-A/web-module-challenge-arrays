@@ -126,7 +126,7 @@ Use the getFlavorByIndex function below to do the following:
 function getFlavorByIndex(array, string){
     return array[string];
 }
-console.log(getFlavorByIndex(originalFlavors, [2]));
+getFlavorByIndex(originalFlavors, [2]);
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 6: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
 As corporate wants to add more and more flavors to their lineup, they've realized that they need to remove flavors based on flavor name, 
@@ -144,10 +144,15 @@ Use the removeFlavorByName function below to do the following:
 */
 
 function removeFlavorByName(array, string){
-    /*your code here*/
+    for(let i = 0; i < array.length; i++){
+        if(array[i] === string){
+          array.splice(i, 1);
+        }
+      }
+     return array;
 }
 
-
+console.log(removeFlavorByName('task 6', originalFlavors, 'Chocolate'))
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 7: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
 July 7th is "World Chocolate Day" and Baskin Robins wants to create promotional materials highlighting all of their chocolate flavors. 
